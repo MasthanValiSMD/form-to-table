@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appending Form Data to Table Using DOM</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.1/mdb.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container text- ">
+        <div class="text-center font-weight-bold">
+            <h1 id="title" >Form to Table</h1>
+            <p id="description">Appending Form data to Table using DOM Manipulation</p>
+        </div>
+
+        <div class="form">
+
+            <form action="" id="form">
+                <div class="form-group ">
+                    <div class="d-flex flex-row mb-2 justify-content-center">
+
+                        <div class="form-outline p-4">
+                            <label for="first-name" id="name-label" class="text-danger">First Name :</label>
+                            <input type="text" id="first-name" maxlength="30" placeholder="First Name" required>
+                        </div>
+                        <br>
+                        <div class="form-outline p-4 ">
+                            <label for="last-name" id="name-label" class="text-danger">Last Name :</label>
+                            <input type="text" id="last-name" maxlength="30" placeholder="Last Name" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row mb-3 justify-content-center">
+                        <div class="form-outline p-4">
+                            <label for="address" id="address-label" class="text-danger">Address :</label>
+                            <textarea id="address" cols="21" rows="1" maxlength="100" placeholder="Address"
+                                required></textarea>
+                        </div>
+
+                        <div class="form-outline p-4">
+                            <label for="pincode" id="pincode-label" class="text-danger">Pincode :</label>
+                            <input type="text" id="pincode" placeholder="Pincode" required>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row mb-3 justify-content-center">
+
+                        <div class="gender p-4" id="gender">
+
+                            <label for="gender" id="gender-label" class="text-danger">Gender :</label>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="male" value="Male">
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input type="radio" name="gender" id="female" value="Female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="food p-4">
+
+                        <label for="food" id="food-label" class="text-danger">Food :</label>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="food" value="Rice" id="rice">
+                            <label for="rice">Rice</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="food" value="Dal" id="dal">
+                            <label for="dal">Dal</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="food" value="Chapati" id="chapati">
+                            <label for="chapati">Chapati</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="food" value="Paneer" id="paneer">
+                            <label for="paneer"> Paneer</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="checkbox" name="food" value="Chicken" id="chicken">
+                            <label for="chicken"> Chicken</label>
+                        </div>
+                    </div>
+
+
+
+                    <div class="d-flex flex-row mb-3 justify-content-center">
+
+                        <div class="form-outline p-4">
+                            <label for="state" id="state-label" class="text-danger">State :</label>
+                            <input type="text" id="state" name="state" maxlength="30" placeholder="State">
+                        </div>
+
+                        <div class="form-outline p-4">
+                            <label for="country" id="country-label" class="text-danger">Country :</label>
+                            <input type="text" name="country" id="country" maxlength="30" placeholder="Country">
+                        </div>
+                    </div>
+                    <div class="button-group p-3">
+                        <input type="button" id="submit" class="btn btn-primary" value="Submit" onclick="addRow()">
+                        <input type="reset" class="btn btn-primary" onclick="reset">
+                    </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div class="data pt-4">
+        <table id="table" class="table ">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
